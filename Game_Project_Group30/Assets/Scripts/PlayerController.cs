@@ -6,6 +6,11 @@ public class PlayerController : MonoBehaviour
 {
     public float speed = 10f;
 
+    public float totalScore;
+
+    public int lives = 3;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -41,6 +46,6 @@ public class PlayerController : MonoBehaviour
     /// </summary>
     private void Restrictions()
     {
-        transform.position = new Vector3(Mathf.Clamp(transform.position.x, -7.5f, 7.5f), transform.position.y, transform.position.z);
+        transform.position = new Vector3(Mathf.Clamp(transform.position.x, -7.3f, 7.3f), transform.position.y, transform.position.z);
     }
 }
