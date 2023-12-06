@@ -17,4 +17,12 @@ public class ShipMovement : MonoBehaviour
     {
         transform.Translate(Vector3.right * speed * Time.deltaTime);
     }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "Boundary")
+        {
+            speed *= -1;
+        }
+    }
 }
