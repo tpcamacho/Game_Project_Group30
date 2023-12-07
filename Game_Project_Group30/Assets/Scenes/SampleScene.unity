@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.018235292, g: 0.018101294, b: 0.018235292, a: 1}
+  m_IndirectSpecularColor: {r: 0.018153807, g: 0.018034855, b: 0.018153807, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1812,6 +1812,18 @@ PrefabInstance:
       value: 180
       objectReference: {fileID: 0}
     - target: {fileID: 8721223211641021087, guid: d43feba01518b4a39b8974a3e62d06a5, type: 3}
+      propertyPath: m_Size.x
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 8721223211641021087, guid: d43feba01518b4a39b8974a3e62d06a5, type: 3}
+      propertyPath: m_Size.y
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8721223211641021087, guid: d43feba01518b4a39b8974a3e62d06a5, type: 3}
+      propertyPath: m_Center.y
+      value: -3.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8721223211641021087, guid: d43feba01518b4a39b8974a3e62d06a5, type: 3}
       propertyPath: m_IsTrigger
       value: 0
       objectReference: {fileID: 0}
@@ -3330,6 +3342,18 @@ PrefabInstance:
       value: 180
       objectReference: {fileID: 0}
     - target: {fileID: 8164917458950705429, guid: 44f922c97f1fc44d795a30f8883640ca, type: 3}
+      propertyPath: m_Size.x
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 8164917458950705429, guid: 44f922c97f1fc44d795a30f8883640ca, type: 3}
+      propertyPath: m_Size.y
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8164917458950705429, guid: 44f922c97f1fc44d795a30f8883640ca, type: 3}
+      propertyPath: m_Center.y
+      value: -3.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8164917458950705429, guid: 44f922c97f1fc44d795a30f8883640ca, type: 3}
       propertyPath: m_IsTrigger
       value: 0
       objectReference: {fileID: 0}
@@ -4457,6 +4481,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
+  EnemyOneLife: 1
+  EnemyTwoLife: 1
+  BulletDamage: 1
   goingRight: 1
 --- !u!4 &349579333
 Transform:

@@ -20,15 +20,17 @@ public class Bullets : MonoBehaviour
         if (enemyOne != null)
         {
             enemyOne.takeDamage(damage);
+            Destroy(gameObject);
         }
 
         EnemyTwo enemyTwo = other.GetComponent<EnemyTwo>();
         if (enemyTwo != null)
         {
             enemyTwo.takeDamage(damage);
+            Destroy(gameObject);
         }
 
-        Destroy(gameObject);
+
     }
         
  

@@ -30,6 +30,7 @@ public class EnemyOne : MonoBehaviour
     {
         if (other.gameObject.tag == "Bullet")
         {
+            Debug.Log("Hit Bullet");
             enemyOneLife -= bulletDamage;
         }
     }
