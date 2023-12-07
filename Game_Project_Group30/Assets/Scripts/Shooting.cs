@@ -2,8 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyOne : MonoBehaviour
+public class Shooting : MonoBehaviour
 {
+    public GameObject BulletPrefab;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -13,6 +15,9 @@ public class EnemyOne : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            Instantiate(BulletPrefab, transform.position, Quaternion.identity);
+        }
     }
 }

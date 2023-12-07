@@ -39,6 +39,8 @@ public class PlayerController : MonoBehaviour
             transform.position += Vector3.left * speed * Time.deltaTime;
             Restrictions();
         }
+
+        
     }
 
     /// <summary>
