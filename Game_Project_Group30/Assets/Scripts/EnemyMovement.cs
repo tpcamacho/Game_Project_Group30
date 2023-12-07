@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ShipMovement : MonoBehaviour
+public class EnemyMovement : MonoBehaviour
 {
     public float speed = 5;
     private float dist;
@@ -10,12 +10,16 @@ public class ShipMovement : MonoBehaviour
     private float disMax = 5f;
     private Vector3 temp;
 
+    public int EnemyOneLife = 1;
+    public int EnemyTwoLife = 1;
+    public int BulletDamage = 1;
+
     public bool goingRight = true;
 
     // Start is called before the first frame update
     void Start()
     {
-        //Move();
+     
     }
 
     // Update is called once per frame
@@ -23,37 +27,6 @@ public class ShipMovement : MonoBehaviour
     {
         transform.Translate(Vector3.right * speed * Time.deltaTime);
     }
-
-    /*
-    private void Move()
-    {
-        if (goingRight)
-        {
-            if (transform.position.x >= -dist)
-            {
-                temp = Vector3.left;
-                SetRandomDirectionSwitch();
-                goingRight = false;
-            }
-        }
-        else
-        {
-            if (transform.position.x <= dist)
-            {
-                temp = Vector3.right;
-                SetRandomDirectionSwitch();
-                goingRight = true;
-            }
-        }
-        transform.position += temp * Time.deltaTime * speed;
-    }
-
-
-    private void SetRandomDirectionSwitch()
-    {
-        dist = Random.Range(distMin, disMax);
-    }
-    */
 
    
     private void OnCollisionEnter(Collision collision)
