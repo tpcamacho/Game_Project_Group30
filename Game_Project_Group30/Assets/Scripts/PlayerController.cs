@@ -58,10 +58,10 @@ public class PlayerController : MonoBehaviour
 
         lives--;
 
-        if (lives == 0)
+        if (lives <= 0)
         {
             Debug.Log("Game Over");
-            //scene change
+            SceneManager.LoadScene(2);
         }
            
     }
