@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -9,7 +11,6 @@ public class PlayerController : MonoBehaviour
     public float totalScore;
 
     public int lives = 3;
-
 
     // Start is called before the first frame update
     void Start()
@@ -50,4 +51,43 @@ public class PlayerController : MonoBehaviour
     {
         transform.position = new Vector3(Mathf.Clamp(transform.position.x, -7.3f, 7.3f), transform.position.y, transform.position.z);
     }
+
+    public void loseLife()
+    {
+        Debug.Log("Player lost a life");
+
+        lives--;
+
+        if (lives == 0)
+        {
+            Debug.Log("Game Over");
+            //scene change
+        }
+           
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "Enemy One")
+        {
+            loseLife();
+        }
+
+        if (other.gameObject.tag == "Enemy Two")
+        {
+            loseLife();
+        }
+    }
+
+
+
+    
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "Enemy One" || collision.gameObject.tag == "Enemy Two")
+        {
+            loseLife();
+        }
+    }
+    
 }

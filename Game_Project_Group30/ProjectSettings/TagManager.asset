@@ -9,6 +9,9 @@ TagManager:
   - Enemy Two
   - Boundary
   - Bullet
+  - Life One
+  - Life Two
+  - Life Three
   layers:
   - Default
   - TransparentFX
