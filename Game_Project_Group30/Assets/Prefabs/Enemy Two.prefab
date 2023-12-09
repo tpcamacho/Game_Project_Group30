@@ -3161,6 +3161,7 @@ GameObject:
   - component: {fileID: 4695711597261806998}
   - component: {fileID: 8721223211641021087}
   - component: {fileID: -7597548597751457610}
+  - component: {fileID: 7790542174960788595}
   m_Layer: 0
   m_Name: Enemy Two
   m_TagString: Enemy Two
@@ -3219,6 +3220,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyTwoLife: 1
   bulletDamage: 1
+--- !u!114 &7790542174960788595
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3398396153846939436}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81393d6bd6ea7432ebc5b9f02df3a170, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyShoot: {fileID: 3175792989417204978, guid: b44ae6deb2f8e467381fea46fa795460, type: 3}
 --- !u!1 &3430674351581227102
 GameObject:
   m_ObjectHideFlags: 0

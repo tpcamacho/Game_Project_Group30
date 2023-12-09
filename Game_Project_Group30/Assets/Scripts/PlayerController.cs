@@ -86,6 +86,11 @@ public class PlayerController : MonoBehaviour
             loseLife();
         }
 
+        if (other.gameObject.tag == "Enemy Bullet")
+        {
+            loseLife();
+        }
+
         
 
     }
@@ -95,6 +100,11 @@ public class PlayerController : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag == "Enemy One" || collision.gameObject.tag == "Enemy Two")
+        {
+            loseLife();
+        }
+
+        if (collision.gameObject.tag == "Enemy Bullet")
         {
             loseLife();
         }

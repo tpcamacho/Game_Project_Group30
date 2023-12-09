@@ -12,6 +12,7 @@ TagManager:
   - Life One
   - Life Two
   - Life Three
+  - Enemy Bullet
   layers:
   - Default
   - TransparentFX
