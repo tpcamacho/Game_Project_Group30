@@ -9,12 +9,21 @@ public class EnemyOne : MonoBehaviour
     public int enemyOneLife = 1;
     public int bulletDamage = 1;
 
+    
+
+    public float speed;
+
+    private void Start()
+    {
+        
+    }
 
 
     // Update is called once per frame
     void Update()
     {
         
+
     }
 
     public void takeDamage (int damage)
