@@ -4,20 +4,24 @@ using UnityEngine;
 
 public class Bullets : MonoBehaviour
 {
+    private ScoreManager scoreManager;
     public float speed;
 
     public int damage = 1;
 
     public float totalScore = 0f;
 
+    /*
     public float enemyOnePoints = 100f;
     private float enemyTwoPoints = 150f;
     private float bossPoints = 350f;
+    */
 
     // Start is called before the first frame update
     void Start()
     {
         StartCoroutine(DespawnDelay());
+        scoreManager = GameObject.Find("Points").GetComponent<ScoreManager>();
     }
 
     private void OnTriggerEnter(Collider other)
@@ -26,6 +30,7 @@ public class Bullets : MonoBehaviour
         if (enemyOne != null)
         {
             enemyOne.takeDamage(damage);
+            scoreManager.updateScore(93);
             Destroy(gameObject);
         }
 
@@ -33,6 +38,7 @@ public class Bullets : MonoBehaviour
         if (enemyTwo != null)
         {
             enemyTwo.takeDamage(damage);
+            scoreManager.updateScore(156);
             Destroy(gameObject);
         }
 

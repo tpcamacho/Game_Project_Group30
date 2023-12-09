@@ -9,7 +9,7 @@ public class UIManager : MonoBehaviour
     
     public Bullets Bullets;
     public PlayerController PlayerController;
-    public TMP_Text scoreDisplay;
+   
     public TMP_Text livesDisplay;
 
 
@@ -17,7 +17,7 @@ public class UIManager : MonoBehaviour
     void Update()
     {
 
-        scoreDisplay.text = "Score: " + Bullets.totalScore;
+        
         livesDisplay.text = "Lives: " + PlayerController.lives;
 
     }
