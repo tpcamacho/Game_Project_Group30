@@ -6,6 +6,7 @@ using TMPro;
 
 public class UIManager : MonoBehaviour
 {
+    
     public Bullets Bullets;
     public PlayerController PlayerController;
     public TMP_Text scoreDisplay;

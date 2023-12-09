@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.018235292, g: 0.018101294, b: 0.018235292, a: 1}
+  m_IndirectSpecularColor: {r: 0.018153807, g: 0.018034855, b: 0.018153807, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -15302,6 +15302,10 @@ PrefabInstance:
       propertyPath: LifeThree
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 7138550602387792354, guid: 8da4738ab103443d18caf157eabb3ad5, type: 3}
+      propertyPath: BulletPrefab
+      value: 
+      objectReference: {fileID: 977660653321705844, guid: 0007c0a12c92043b3a5e122bd0a74bd7, type: 3}
     - target: {fileID: 7138550602387792354, guid: 8da4738ab103443d18caf157eabb3ad5, type: 3}
       propertyPath: LifeOnePrefab
       value: 

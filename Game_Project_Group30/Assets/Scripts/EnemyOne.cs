@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class EnemyOne : MonoBehaviour
 {
+
+
     public int enemyOneLife = 1;
     public int bulletDamage = 1;
 
@@ -24,6 +26,23 @@ public class EnemyOne : MonoBehaviour
         }
 
     }
+
+
+    /*
+    private void CheckForDamage()
+    {
+        RaycastHit hit;
+
+        if (Physics.Raycast(transform.position, Vector3.down, out hit, 1))
+        {
+            if (hit.collider.tag == "Bullet")
+            {
+                Bullets.totalScore += Bullets.enemyOnePoints;
+                Destroy(gameObject);
+            }
+        }
+    }
+    */
 
 
     private void OnTriggerEnter(Collider other)

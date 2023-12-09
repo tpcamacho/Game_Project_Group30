@@ -10,7 +10,7 @@ public class Bullets : MonoBehaviour
 
     public float totalScore = 0f;
 
-    private float enemyOnePoints = 100f;
+    public float enemyOnePoints = 100f;
     private float enemyTwoPoints = 150f;
     private float bossPoints = 350f;
 
@@ -37,29 +37,40 @@ public class Bullets : MonoBehaviour
         }
 
         
-        if (other.gameObject.tag == "EnemyOne")
-        {
-            totalScore += enemyOnePoints;
-            Destroy(other.gameObject);
-        }
-        else if (other.gameObject.tag == "EnemyTwo")
-        {
-            totalScore += enemyTwoPoints;
-            Destroy(other.gameObject);
-        }
-        else if (other.gameObject.tag == "Boss")
-        {
-            totalScore += bossPoints;
-            Destroy(other.gameObject);
-        }
+   
     }
+
+    /*
+    private void CheckForDamage()
+    {
+        RaycastHit hit;
         
- 
+        if (Physics.Raycast(transform.position, Vector3.up, out hit, 1))
+        {
+            //check tags 
+            if (hit.collider.tag == "Enemy One")
+            {
+                totalScore += enemyOnePoints;
+                Destroy(gameObject);
+            }
+            
+            if (hit.collider.tag == "Enemy Two")
+            {
+                totalScore += enemyTwoPoints;
+                Destroy(gameObject);
+            }
+        }
+      
+    }
+    */
+
 
     // Update is called once per frame
     void Update()
     {
         transform.Translate(Vector3.up * speed * Time.deltaTime);
+
+       
     }
 
     IEnumerator DespawnDelay()
