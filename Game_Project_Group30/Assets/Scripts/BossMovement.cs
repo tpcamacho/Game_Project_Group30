@@ -1,15 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using TMPro;
 
-public class ScoreManager : MonoBehaviour
+public class BossMovement : MonoBehaviour
 {
+    public float speed = 5;
     public float score;
-    public float speed = 5f;
-    public TMP_Text scoreText;
 
-    // Start is called before the first frame update
+   // Start is called before the first frame update
     void Start()
     {
         
@@ -20,18 +18,9 @@ public class ScoreManager : MonoBehaviour
     {
         if (score >= 1245)
         {
-
             return;
         }
-
         transform.Translate(Vector3.right * speed * Time.deltaTime);
-    }
-
-
-    public void updateScore(float points)
-    {
-        score += points;
-        scoreText.text = "Score: " + score;
     }
 
 
