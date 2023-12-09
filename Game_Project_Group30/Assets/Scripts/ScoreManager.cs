@@ -9,6 +9,9 @@ public class ScoreManager : MonoBehaviour
     public float speed = 5f;
     public TMP_Text scoreText;
 
+    public BossMovement Boss;
+    Vector3 temporary = new Vector3(0f, 5f, 0f);
+
     // Start is called before the first frame update
     void Start()
     {
@@ -25,6 +28,22 @@ public class ScoreManager : MonoBehaviour
         }
 
         transform.Translate(Vector3.right * speed * Time.deltaTime);
+
+
+        if (score >= 1245)
+        {
+            return;
+        }
+        //  transform.Translate(Vector2.right * speed * Time.deltaTime);
+
+        if (score >= 1245)
+        {
+            // transform.position = transform.position.tag("bossSpawn");
+            //0f, 5f, 0f
+            //Vector3 temp = new Vector3(7.0f,0,0);
+            //myGameObject.transform.position += temp;
+            Boss.transform.position = temporary;
+        }
     }
 
 

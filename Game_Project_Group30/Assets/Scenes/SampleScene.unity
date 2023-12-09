@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.018235292, g: 0.018101294, b: 0.018235292, a: 1}
+  m_IndirectSpecularColor: {r: 0.018153807, g: 0.018034855, b: 0.018153807, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -5072,6 +5072,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   score: 0
+  Boss: {fileID: 213561263}
 --- !u!1 &215637968
 GameObject:
   m_ObjectHideFlags: 0
@@ -17226,7 +17227,6 @@ GameObject:
   m_Component:
   - component: {fileID: 833765742}
   - component: {fileID: 833765743}
-  - component: {fileID: 833765744}
   m_Layer: 0
   m_Name: Boss (2)
   m_TagString: Boss
@@ -17271,20 +17271,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 12.490688, y: 15.17747, z: 1.7843845}
   m_Center: {x: -1.4999979, y: -2.4528952, z: 0.2730648}
---- !u!114 &833765744
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 833765741}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3bc1e3e7b7cd64118a103152adb5babe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 5
-  score: 0
 --- !u!1 &840279755
 GameObject:
   m_ObjectHideFlags: 0
@@ -17390,6 +17376,37 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 840279755}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &842575962
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 842575963}
+  m_Layer: 0
+  m_Name: bossSpawn
+  m_TagString: bossSpawn
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &842575963
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 842575962}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 5, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &846580528
 GameObject:
   m_ObjectHideFlags: 0
@@ -34811,6 +34828,7 @@ MonoBehaviour:
   score: 0
   speed: 5
   scoreText: {fileID: 1610180259}
+  Boss: {fileID: 213561266}
 --- !u!4 &1694752494
 Transform:
   m_ObjectHideFlags: 0
@@ -36421,7 +36439,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1832504809}
   - component: {fileID: 1832504810}
-  - component: {fileID: 1832504811}
   m_Layer: 0
   m_Name: Boss (1)
   m_TagString: Boss
@@ -36466,20 +36483,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 12.490688, y: 15.17747, z: 1.7843845}
   m_Center: {x: -1.4999979, y: -2.4528952, z: 0.2730648}
---- !u!114 &1832504811
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1832504808}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3bc1e3e7b7cd64118a103152adb5babe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 5
-  score: 0
 --- !u!1 &1835841131
 GameObject:
   m_ObjectHideFlags: 0
@@ -39956,8 +39959,8 @@ GameObject:
   - component: {fileID: 1989441401}
   - component: {fileID: 1989441400}
   m_Layer: 0
-  m_Name: Boss Round
-  m_TagString: Untagged
+  m_Name: BossRound
+  m_TagString: bossRow
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -39975,7 +39978,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
-  score: 0
+  score: 1245
+  Boss: {fileID: 213561263}
 --- !u!4 &1989441401
 Transform:
   m_ObjectHideFlags: 0
@@ -42643,3 +42647,4 @@ SceneRoots:
   - {fileID: 950560088}
   - {fileID: 489479188}
   - {fileID: 1694752494}
+  - {fileID: 842575963}

@@ -13,6 +13,8 @@ TagManager:
   - Life Two
   - Life Three
   - Enemy Bullet
+  - bossSpawn
+  - bossRow
   layers:
   - Default
   - TransparentFX
