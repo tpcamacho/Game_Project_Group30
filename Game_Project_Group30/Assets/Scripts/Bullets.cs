@@ -8,6 +8,12 @@ public class Bullets : MonoBehaviour
 
     public int damage = 1;
 
+    public float totalScore = 0f;
+
+    private float enemyOnePoints = 100f;
+    private float enemyTwoPoints = 150f;
+    private float bossPoints = 350f;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -30,7 +36,22 @@ public class Bullets : MonoBehaviour
             Destroy(gameObject);
         }
 
-
+        
+        if (other.gameObject.tag == "EnemyOne")
+        {
+            totalScore += enemyOnePoints;
+            Destroy(other.gameObject);
+        }
+        else if (other.gameObject.tag == "EnemyTwo")
+        {
+            totalScore += enemyTwoPoints;
+            Destroy(other.gameObject);
+        }
+        else if (other.gameObject.tag == "Boss")
+        {
+            totalScore += bossPoints;
+            Destroy(other.gameObject);
+        }
     }
         
  
