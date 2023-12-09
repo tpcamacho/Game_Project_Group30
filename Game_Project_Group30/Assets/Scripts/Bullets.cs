@@ -11,11 +11,7 @@ public class Bullets : MonoBehaviour
 
     public float totalScore = 0f;
 
-    /*
-    public float enemyOnePoints = 100f;
-    private float enemyTwoPoints = 150f;
-    private float bossPoints = 350f;
-    */
+    
 
     // Start is called before the first frame update
     void Start()
@@ -46,29 +42,7 @@ public class Bullets : MonoBehaviour
    
     }
 
-    /*
-    private void CheckForDamage()
-    {
-        RaycastHit hit;
-        
-        if (Physics.Raycast(transform.position, Vector3.up, out hit, 1))
-        {
-            //check tags 
-            if (hit.collider.tag == "Enemy One")
-            {
-                totalScore += enemyOnePoints;
-                Destroy(gameObject);
-            }
-            
-            if (hit.collider.tag == "Enemy Two")
-            {
-                totalScore += enemyTwoPoints;
-                Destroy(gameObject);
-            }
-        }
-      
-    }
-    */
+    
 
 
     // Update is called once per frame

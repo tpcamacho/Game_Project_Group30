@@ -86,24 +86,7 @@ public class PlayerController : MonoBehaviour
             loseLife();
         }
 
-         /*
-        if (other.gameObject.tag == "EnemyOne")
-        {
-            totalScore += enemyOnePoints;
-            Destroy(other.gameObject);
-        }
-        else if (other.gameObject.tag == "EnemyTwo")
-        {
-            totalScore += enemyTwoPoints;
-            Destroy(other.gameObject);
-        }
-        else if (other.gameObject.tag == "Boss")
-        {
-            totalScore += bossPoints;
-            Destroy(other.gameObject);
-
-        }
-        */
+        
 
     }
 
